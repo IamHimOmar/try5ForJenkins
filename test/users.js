@@ -17,11 +17,11 @@ chai.use(chaiHttp);
 
 //Create dump database for test with neccessary data for test.
 function SetDB(done) {
-  exec('createdb dumpdb',function(err){
+  exec('createdb -U omarmhadden dumpdb',function(err){
     if (err !== null) {
       console.log('exec error' + err);
     }
-    exec('psql -d dumpdb -f testdb.sql',function(err){
+    exec('psql -d dumpdb -U omarmhadden -f testdb.sql',function(err){
       if (err !== null) {
         console.log('exec error' + err);
       }
@@ -30,7 +30,7 @@ function SetDB(done) {
   });
 }
 function FillDB(done){
-  exec('psql -d dumpdb -f insertdata.sql',function(err){
+  exec('psql -d dumpdb -U omarmhadden -f insertdata.sql',function(err){
     if (err !== null) {
       console.log('exec error' + err);
     }
@@ -38,7 +38,7 @@ function FillDB(done){
   })
 }
 function ClearDB(done){
-  exec('psql -d dumpdb -f cleardata.sql',function(err){
+  exec('psql -d dumpdb -U omarmhadden -f cleardata.sql',function(err){
     if (err !== null) {
       console.log('exec error' + err);
     }
@@ -48,7 +48,7 @@ function ClearDB(done){
 //Drop dump database for test
 function DropDB() {
 
-  exec('psql -d postgres -f dropdb.sql',function(err){
+  exec('psql -d postgres -U postgres -f dropdb.sql',function(err){
     if (err !== null) {
       console.log('exec error' + err);
     }
