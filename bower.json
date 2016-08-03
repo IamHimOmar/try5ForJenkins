@@ -1,0 +1,20 @@
+{
+  "name": "try5",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "IamHimOmar <omar0954@edu.eal.dk>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "ui-router#^0.3.1"
+  }
+}

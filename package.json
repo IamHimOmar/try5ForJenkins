@@ -1,0 +1,25 @@
+{
+  "name": "try5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "bower": "^1.7.9",
+    "chai": "^3.5.0",
+    "express": "^4.14.0",
+    "http-status": "^0.2.3",
+    "mathjs": "^3.3.0",
+    "mocha": "^3.0.0",
+    "request": "^2.74.0",
+    "superagent": "^2.1.0"
+  },
+  "devDependencies": {
+    "chai-http": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
