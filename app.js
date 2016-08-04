@@ -1,7 +1,7 @@
 var port = 8000,
     express = require('express'),
     parser = require('body-parser'),
-    router = require('./src/api'),
+    router = require('./src/api/index.js'),
     app = express();
 
 

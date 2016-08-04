@@ -15,9 +15,9 @@ var exec = require('child_process').exec;
 chai.use(chaiHttp);
 
 
-//Create dump database for test with neccessary data for test.
+//Create dump database for test with neccessary data for test
 function SetDB(done) {
-  exec('createdb  dumpdb',function(err){
+  exec('createdb dumpdb',function(err){
     if (err !== null) {
       console.log('exec error' + err);
     }
@@ -48,7 +48,7 @@ function ClearDB(done){
 //Drop dump database for test
 function DropDB() {
 
-  exec('psql -d postgres -U postgres -f dropdb.sql',function(err){
+  exec('psql -d postgres -f dropdb.sql',function(err){
     if (err !== null) {
       console.log('exec error' + err);
     }
@@ -82,7 +82,7 @@ describe('test crud', function() {
             res.should.be.json;
             res.body[0].name.should.equal("Name From Test Post Method");
             done();
-          });
+          })
       });
   });
     it('get users GET/users', function(done){
